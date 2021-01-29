@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Bourrée grand remplacement",
-    "version": "3.3",
+    "version": "4.20",
   
     "description": "Interacts with the specific 'La bourrée des serfs' page on youtube",
   
@@ -14,7 +14,8 @@
     "content_scripts": [
       {
         "matches": [
-            "https://www.youtube.com/watch?v=sQPEWhceJOI", 
+            "https://www.youtube.com/watch?v=sQPEWhceJOI",
+            "https://www.youtube.com/watch?v=sQPEWhceJOI&feature=youtu.be",
             "https://www.youtube.com/watch?list=0&v=sQPEWhceJOI"
         ],
         "js": ["bourree.js"]
