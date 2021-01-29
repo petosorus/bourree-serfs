@@ -22,7 +22,20 @@ const danses = [
     "Le ballet",
     "L'arabesque",
     "Le boléro",
-    "Le fest-noz"
+    "Le fest-noz",
+    "La bourrée",
+    "La valse",
+    "Le bal",
+    "La gavotte",
+    "Le passepieds",
+    "La contredanse",
+    "Le quadrille",
+    "L'an dro",
+    "La ronde",
+    "La ribambelle",
+    "La mazurka",
+    "La guinguette",
+    "Le carnaval"
 ];
 const travailleurs = [
     "de l'URSSAF",
@@ -45,7 +58,17 @@ const travailleurs = [
     "des tourneurs-fraiseurs",
     "des boulangers",
     "des pizzaïolos",
-    "des enculés"
+    "des enculés",
+    "des serfs",
+    "des esclaves",
+    "du commerce triangulaire",
+    "des éboueurs",
+    "des caissiers",
+    "du genre humain",
+    "des sous-humains",
+    "des videurs",
+    "des anticapitalistes",
+    "des ananas"
 ];
 
 function aleatoire(maximum, minimum = 0) {
@@ -72,7 +95,7 @@ function fonctionnementNormal() {
     setTimeout(fonctionnementNormal, intervalle);
 }
 
-setTimeout(selectionAleatoireTitreAmusant, 0);
+setTimeout(selectionAleatoireTitreAmusant, 30000);
 setTimeout(fonctionnementNormal, 0);
 
 // Pas de commentaire
