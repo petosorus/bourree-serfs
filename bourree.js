@@ -1,7 +1,7 @@
 'use strict';
 
-const INTERVALLE_MINIMUM = 15 * 60 * 1000;
-const INTERVALLE_MAXIMUM = 60 * 60 * 1000;
+const INTERVALLE_MINIMUM = 40 * 1000;
+const INTERVALLE_MAXIMUM = 2 * 60 * 1000;
 
 const danses = [
     "La symphonie",
@@ -35,7 +35,19 @@ const danses = [
     "La ribambelle",
     "La mazurka",
     "La guinguette",
-    "Le carnaval"
+    "Le carnaval",
+    "La complainte",
+    "Le canon",
+    "Le bœuf",
+    "La bande originale du film",
+    "L'orchestre",
+    "Le thème musical",
+    "Le chant ethnique",
+    "Le freestyle",
+    "Le clip officiel de la chanson",
+    "La carioca",
+    "La ballade",
+    "La musique"
 ];
 const travailleurs = [
     "de l'URSSAF",
@@ -68,7 +80,26 @@ const travailleurs = [
     "des sous-humains",
     "des videurs",
     "des anticapitalistes",
-    "des ananas"
+    "des ananas",
+    "des réceptionnistes",
+    "du KRAKEEEEEEEEEEEEEN",
+    "du Kraken",
+    "des socialistes",
+    "des communistes",
+    "des travailleurs sociaux",
+    "des livreurs cyclistes",
+    "des salariés",
+    "des cotiseurs à la caisse du régime de retraite du service public",
+    "des majordomes",
+    "des servants",
+    "des besogneurs",
+    "des procrastinateurs",
+    "des plombiers portugais",
+    "des valets",
+    "des stewarts",
+    "des hôtesses de l'air",
+    "de l'Intendant du Gondor",
+    "des laneurs"
 ];
 
 function aleatoire(maximum, minimum = 0) {
