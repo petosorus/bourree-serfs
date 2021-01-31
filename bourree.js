@@ -11,8 +11,7 @@ const danses = [
     "La marche",
     "Le menuet",
     "La gigue",
-    "Le branle",
-    "Le bransle",
+    ["Le branle", "Le bransle"],
     "L'ôde",
     "La polka",
     "Le chœur",
@@ -51,55 +50,53 @@ const danses = [
 ];
 const travailleurs = [
     "de l'URSSAF",
-    "des travailleurs",
-    "des tâcherons",
-    "des micro-entrepreneurs",
+    ["des travailleurs", "des travailleuses"],
+    ["des tâcherons", "des tâcheronnes"],
+    ["des micro-entrepreneurs", "des micro-entrepreneuses"],
     "du genre travailleur",
     "des cégétistes",
-    "des employés",
+    ["des employés", "des employées"],
     "des péons",
-    "des villageois",
-    "des villageoises",
-    "des syndiqués",
+    ["des villageois", "des villageoises"],
+    ["des syndiqués", "des syndiquées"],
     "des macronistes",
     "des gilets-jaunes",
-    "des agriculteurs",
+    ["des agriculteurs", "des agricultrices"],
     "des commis de cuisine",
-    "des bâtisseurs",
+    ["des bâtisseurs", "des bâtisseuses"],
     "de Lionel Jospin",
     "des tourneurs-fraiseurs",
-    "des boulangers",
+    ["des boulangers", "des boulangères"],
     "des pizzaïolos",
-    "des enculés",
+    ["des enculés", "des enculées"],
     "des serfs",
     "des esclaves",
     "du commerce triangulaire",
-    "des éboueurs",
-    "des caissiers",
+    ["des éboueurs", "des éboueuses"],
+    ["des caissiers", "des caissières"],
     "du genre humain",
-    "des sous-humains",
-    "des videurs",
+    ["des sous-humains", "des sous-humaines"],
+    ["des videurs", "des videuses"],
     "des anticapitalistes",
     "des ananas",
     "des réceptionnistes",
-    "du KRAKEEEEEEEEEEEEEN",
-    "du Kraken",
+    ["du KRAKEEEEEEEEEEEEEN", "du Kraken"],
     "des socialistes",
     "des communistes",
     "des travailleurs sociaux",
     "des livreurs cyclistes",
-    "des salariés",
+    ["des salariés", "des salariées"],
     "des cotiseurs à la caisse du régime de retraite du service public",
     "des majordomes",
-    "des servants",
-    "des besogneurs",
-    "des procrastinateurs",
+    ["des servants", "des servantes"],
+    ["des boniches", "des bonniches"],
+    ["des besogneurs", "des besogneuses"],
+    ["des procrastinateurs", "des procrastinatrices"],
     "des plombiers portugais",
     "des valets",
-    "des stewarts",
-    "des hôtesses de l'air",
+    ["des stewarts", "des hôtesses de l'air"],
     "de l'Intendant du Gondor",
-    "des laneurs"
+    ["des laneurs", "des laneuses"]
 ];
 
 function aleatoire(maximum, minimum = 0) {
@@ -110,8 +107,22 @@ function aleatoire(maximum, minimum = 0) {
 function selectionAleatoireTitreAmusant() {
     let danseIndex = aleatoire(danses.length);
     let travailleurIndex = aleatoire(travailleurs.length);
+
+    let danseSelectionnee = danses[danseIndex];
+    let travailSelectionne = travailleurs[travailleurIndex];
+
+    if (Array.isArray(danseSelectionnee)) {
+        let index = aleatoire(danseSelectionnee.length);
+        danseSelectionnee = danseSelectionnee[index];
+    }
+
+    if (Array.isArray(travailSelectionne)) {
+        let index = aleatoire(travailSelectionne.length);
+        travailSelectionne = travailSelectionne[index];
+    }
+
     
-    let titreAmusant = `${danses[danseIndex]} ${travailleurs[travailleurIndex]} - Musique médiévale : Frédéric LAURENT - YouTube`;
+    let titreAmusant = `${danseSelectionnee} ${travailSelectionne} - Musique médiévale : Frédéric LAURENT - YouTube`;
     // console.log(titreAmusant);
 
     document.title = titreAmusant;
