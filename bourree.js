@@ -137,7 +137,7 @@ function fonctionnementNormal() {
     setTimeout(fonctionnementNormal, intervalle);
 }
 
-setTimeout(selectionAleatoireTitreAmusant, 30000);
+setTimeout(selectionAleatoireTitreAmusant, 5000);
 setTimeout(fonctionnementNormal, 0);
 
 // Pas de commentaire
