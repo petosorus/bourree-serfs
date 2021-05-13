@@ -46,7 +46,8 @@ const danses = [
     "Le clip officiel de la chanson",
     "La carioca",
     "La ballade",
-    "La musique"
+    "La musique",
+    "Le psaume démoniaque"
 ];
 const travailleurs = [
     "de l'URSSAF",
@@ -96,7 +97,8 @@ const travailleurs = [
     "des valets",
     ["des stewarts", "des hôtesses de l'air"],
     "de l'Intendant du Gondor",
-    ["des laneurs", "des laneuses"]
+    ["des laneurs", "des laneuses"],
+    "de Satan"
 ];
 
 function aleatoire(maximum, minimum = 0) {
@@ -127,7 +129,7 @@ function selectionAleatoireTitreAmusant() {
 
     document.title = titreAmusant;
     console.log('prout');
-    document.getElementsByTagName("h1")[0].children[0].innerText = titreAmusant;
+    document.getElementsByTagName("h1")[1].children[0].innerText = titreAmusant;
 }
 
 function fonctionnementNormal() {
